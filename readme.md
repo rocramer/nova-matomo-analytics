@@ -34,7 +34,7 @@ The plugin requires your Matomo url, token and side id in your .env file:
 ```
 MATOMO_URL=https://analytics.example.com/
 MATOMO_TOKEN=8axxxxxxxxxxxxxxxxxxxx35a5a
-MATOMO_PAGE_ID=Z
+MATOMO_PAGE_ID=1
 ```
 
 This is a first version. More Nova Cards and an own dashboard for Matomo metrics are planned for the future.
