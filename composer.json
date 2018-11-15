@@ -7,7 +7,7 @@
             "homepage": "https://www.robincramer.de",
             "role": "Developer"
         }    ],
-    "description": "Matomo Analytics cards.",
+    "description": "Matomo Analytics cards for Laravel Nova.",
     "keywords": [
         "laravel",
         "nova"
