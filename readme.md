@@ -39,6 +39,8 @@ MATOMO_PAGE_ID=Z
 
 This is a first version. More Nova Cards and an own dashboard for Matomo metrics are planned for the future.
 
+Feel free to create a PR or contribute suggestions.
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
