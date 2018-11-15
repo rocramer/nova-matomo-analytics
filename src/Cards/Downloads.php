@@ -3,7 +3,6 @@
 namespace Rocramer\MatomoAnalytics\Cards;
 
 use Illuminate\Http\Request;
-use Laravel\Nova\Metrics\Trend;
 use Laravel\Nova\Metrics\TrendResult;
 use Rocramer\MatomoAnalytics\CustomizedTrend;
 use Rocramer\MatomoAnalytics\Helper\MatomoAPI;
@@ -38,7 +37,7 @@ class Downloads extends CustomizedTrend
     public function ranges()
     {
         return [
-            7 => '7 Days',
+            7  => '7 Days',
             14 => '14 Days',
             30 => '30 Days',
             90 => '90 Days',

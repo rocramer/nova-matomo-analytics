@@ -3,7 +3,6 @@
 namespace Rocramer\MatomoAnalytics\Cards;
 
 use Illuminate\Http\Request;
-use Laravel\Nova\Metrics\Trend;
 use Laravel\Nova\Metrics\TrendResult;
 use Rocramer\MatomoAnalytics\CustomizedTrend;
 use Rocramer\MatomoAnalytics\Helper\MatomoAPI;
@@ -35,9 +34,8 @@ class VisitLength extends CustomizedTrend
         $keys = array_keys($visit_length);
 
         foreach ($keys as $key) {
-
             $value = $visit_length[$key] / $visits[$key];
-            $value = (int)round($value);
+            $value = (int) round($value);
             $results[$key] = $value;
         }
 
@@ -55,7 +53,7 @@ class VisitLength extends CustomizedTrend
     public function ranges()
     {
         return [
-            7 => '7 Days',
+            7  => '7 Days',
             14 => '14 Days',
             30 => '30 Days',
             90 => '90 Days',

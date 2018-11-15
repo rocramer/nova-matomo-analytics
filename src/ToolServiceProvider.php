@@ -2,10 +2,10 @@
 
 namespace Rocramer\MatomoAnalytics;
 
-use Laravel\Nova\Nova;
-use Laravel\Nova\Events\ServingNova;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Nova\Events\ServingNova;
+use Laravel\Nova\Nova;
 use Rocramer\MatomoAnalytics\Http\Middleware\Authorize;
 
 class ToolServiceProvider extends ServiceProvider
@@ -25,7 +25,8 @@ class ToolServiceProvider extends ServiceProvider
 
         Nova::serving(function (ServingNova $event) {
             Nova::script('matomo-analytics', __DIR__.'/../dist/js/tool.js');
-            Nova::style('matomo-analytics', __DIR__.'/../dist/css/tool.css');        });
+            Nova::style('matomo-analytics', __DIR__.'/../dist/css/tool.css');
+        });
     }
 
     /**
