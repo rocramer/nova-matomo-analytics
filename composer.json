@@ -1,0 +1,36 @@
+{
+    "name": "rocramer/nova-matomo-analytics",
+    "authors": [
+        {
+            "name": "Robin Cramer",
+            "email": "mail@robincramer.de",
+            "homepage": "https://www.robincramer.de",
+            "role": "Developer"
+        }    ],
+    "description": "Matomo Analytics cards.",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rocramer\\MatomoAnalytics\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rocramer\\MatomoAnalytics\\ToolServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
