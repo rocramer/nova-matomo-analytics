@@ -1,4 +1,4 @@
-#Matomo Analytics for Nova
+# Matomo Analytics for Nova
 
 *Matomo Analytics for Nova* provides some basic Matomo metrics for your Laravel Nova dashboard.
 

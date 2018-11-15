@@ -17,13 +17,12 @@ abstract class CustomizedTrend extends Trend
     /**
      * Create a new trend metric result.
      *
-     * @param  string|null  $value
+     * @param string|null $value
+     *
      * @return \Laravel\Nova\Metrics\TrendResult
      */
     public function result($value = null)
     {
         return new TrendResult($value);
     }
-
-
 }

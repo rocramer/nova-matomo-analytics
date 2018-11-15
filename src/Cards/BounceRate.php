@@ -34,11 +34,11 @@ class BounceRate extends CustomizedTrend
         $keys = array_keys($bounce_count);
 
         foreach ($keys as $key) {
-
             $value = $bounce_count[$key] / $visits[$key] * 100;
-            $value = (int)round($value);
+            $value = (int) round($value);
             $results[$key] = $value;
         }
+
         return (new TrendResult())
             ->trend($results)
             ->showLatestValue()
@@ -53,7 +53,7 @@ class BounceRate extends CustomizedTrend
     public function ranges()
     {
         return [
-            7 => '7 Days',
+            7  => '7 Days',
             14 => '14 Days',
             30 => '30 Days',
             90 => '90 Days',
