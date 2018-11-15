@@ -3,7 +3,6 @@
 namespace Rocramer\MatomoAnalytics\Cards;
 
 use Illuminate\Http\Request;
-use Laravel\Nova\Metrics\Trend;
 use Laravel\Nova\Metrics\TrendResult;
 use Rocramer\MatomoAnalytics\CustomizedTrend;
 use Rocramer\MatomoAnalytics\Helper\MatomoAPI;
@@ -23,7 +22,7 @@ class UniqueVisitors extends CustomizedTrend
 
         $fetched = file_get_contents($url);
 
-        $results= unserialize($fetched);
+        $results = unserialize($fetched);
 
         return (new TrendResult())
             ->trend($results)
@@ -38,7 +37,7 @@ class UniqueVisitors extends CustomizedTrend
     public function ranges()
     {
         return [
-            7 => '7 Days',
+            7  => '7 Days',
             14 => '14 Days',
             21 => '21 Days',
         ];
