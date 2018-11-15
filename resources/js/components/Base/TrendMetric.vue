@@ -50,7 +50,7 @@ import 'chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css'
 // }
 
 export default {
-    name: 'CustomBaseTrendMetric',
+    name: 'BaseTrendMetric',
 
     props: {
         loading: Boolean,

@@ -1,5 +1,5 @@
 <template>
-    <CustomBaseTrendMetric
+    <BaseTrendMetric
             @selected="handleRangeSelected"
             :title="card.name"
             :value="value"
