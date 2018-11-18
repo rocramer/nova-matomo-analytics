@@ -41,6 +41,10 @@ This is a first version. More Nova Cards and an own dashboard for Matomo metrics
 
 Feel free to create a PR or contribute suggestions.
 
+## Misc.
+
+Keep in mind: All cards get cached for 5 minutes.
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
