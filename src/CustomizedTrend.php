@@ -15,6 +15,15 @@ abstract class CustomizedTrend extends Trend
     public $component = 'custom-trend-metric';
 
     /**
+     * Get the displayable name of the metric.
+     *
+     * @return string
+     */
+    public function name() {
+        return __(parent::name());
+    }
+
+    /**
      * Create a new trend metric result.
      *
      * @param string|null $value
@@ -24,5 +33,34 @@ abstract class CustomizedTrend extends Trend
     public function result($value = null)
     {
         return new TrendResult($value);
+    }
+
+    /**
+     * Get the ranges available for the metric.
+     *
+     * @return array
+     */
+    public function ranges()
+    {
+        return [
+            7  => '7 ' . __('Days'),
+            14 => '14 ' . __('Days'),
+            30 => '30 ' . __('Days'),
+            90 => '90 ' . __('Days'),
+        ];
+    }
+
+    /**
+     * Determine for how many minutes the metric should be cached.
+     *
+     * @return \DateTimeInterface|\DateInterval|float|int
+     */
+    public function cacheFor()
+    {
+        if ($cacheMinutes = config('services.matomo.caching', 5)) {
+            return now()->addMinutes($cacheMinutes);
+        }
+
+        return null;
     }
 }

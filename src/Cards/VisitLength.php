@@ -42,32 +42,7 @@ class VisitLength extends CustomizedTrend
         return (new TrendResult())
             ->trend($results)
             ->showLatestValue()
-            ->suffix('seconds (avg.)');
-    }
-
-    /**
-     * Get the ranges available for the metric.
-     *
-     * @return array
-     */
-    public function ranges()
-    {
-        return [
-            7  => '7 Days',
-            14 => '14 Days',
-            30 => '30 Days',
-            90 => '90 Days',
-        ];
-    }
-
-    /**
-     * Determine for how many minutes the metric should be cached.
-     *
-     * @return \DateTimeInterface|\DateInterval|float|int
-     */
-    public function cacheFor()
-    {
-        return now()->addMinutes(5);
+            ->suffix(__('seconds (avg.)'));
     }
 
     /**

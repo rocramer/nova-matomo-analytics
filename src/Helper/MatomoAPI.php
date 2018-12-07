@@ -15,9 +15,9 @@ class MatomoAPI
      */
     public static function url(string $method, int $date = 7, string $segment = null): string
     {
-        $token_auth = env('MATOMO_TOKEN');
-        $page_id = env('MATOMO_PAGE_ID');
-        $url = env('MATOMO_URL');
+        $token_auth = config('services.matomo.token');
+        $page_id = config('services.matomo.page_id');
+        $url = config('services.matomo.url');
 
         $url .= "?module=API&method=$method";
         $url .= "&idSite=$page_id&period=day&date=last$date";
