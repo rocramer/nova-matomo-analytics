@@ -19,7 +19,8 @@ abstract class CustomizedTrend extends Trend
      *
      * @return string
      */
-    public function name() {
+    public function name()
+    {
         return __(parent::name());
     }
 
@@ -43,10 +44,10 @@ abstract class CustomizedTrend extends Trend
     public function ranges()
     {
         return [
-            7  => '7 ' . __('Days'),
-            14 => '14 ' . __('Days'),
-            30 => '30 ' . __('Days'),
-            90 => '90 ' . __('Days'),
+            7  => '7 '.__('Days'),
+            14 => '14 '.__('Days'),
+            30 => '30 '.__('Days'),
+            90 => '90 '.__('Days'),
         ];
     }
 
@@ -60,7 +61,5 @@ abstract class CustomizedTrend extends Trend
         if ($cacheMinutes = config('services.matomo.caching', 5)) {
             return now()->addMinutes($cacheMinutes);
         }
-
-        return null;
     }
 }
