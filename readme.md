@@ -80,7 +80,6 @@ This package uses localization via [Laravel Translation Strings](https://laravel
 "URL": "URL",
 "No data found.": "Keine Daten gefunden.",
 "Time on Page (avg.)": "Besuchsdauer (Durchschnitt)",
-"Bounce Rate": "Absprungrate",
 "Exit Rate": "Ausstiegsrate",
 "Generation Time (avg.)": "Generierungszeit (Durchschnutt)",
 "Entry Pages": "Einstiegsseiten",
