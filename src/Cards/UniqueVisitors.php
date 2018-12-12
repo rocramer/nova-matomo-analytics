@@ -18,11 +18,7 @@ class UniqueVisitors extends CustomizedTrend
      */
     public function calculate(Request $request)
     {
-        $url = MatomoAPI::url('VisitsSummary.getUniqueVisitors', $request->range);
-
-        $fetched = file_get_contents($url);
-
-        $results = unserialize($fetched);
+        $results = MatomoAPI::visitsSummary('getUniqueVisitors', $request->range);
 
         return (new TrendResult())
             ->trend($results)

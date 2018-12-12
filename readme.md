@@ -1,8 +1,8 @@
 # Matomo Analytics for Nova
 
-*Matomo Analytics for Nova* provides some basic Matomo metrics for your Laravel Nova dashboard.
+*Matomo Analytics for Nova* provides some basic Matomo metrics and page tables for your Laravel Nova dashboard.
 
-![image](https://www.robincramer.de/wp-content/uploads/2018/11/matomo-nova.png)
+![image](https://www.robincramer.de/wp-content/uploads/2018/12/matomo-nova.png)
 
 
 ## Installation
@@ -25,6 +25,9 @@ protected function cards()
         new \Rocramer\MatomoAnalytics\Cards\BounceRate(),
         new \Rocramer\MatomoAnalytics\Cards\Outlinks(),
         new \Rocramer\MatomoAnalytics\Cards\Downloads()
+        new \Rocramer\MatomoAnalytics\Cards\EntryPages()
+        new \Rocramer\MatomoAnalytics\Cards\ExitPages()
+        new \Rocramer\MatomoAnalytics\Cards\MostViewedPages()
     ];
 }
 ```
@@ -72,6 +75,19 @@ This package uses localization via [Laravel Translation Strings](https://laravel
 "Downloads": "Downloads",
 "seconds (avg.)": "Sekunden (Durchschnitt)",
 "Days": "Tage",
+"Clicks": "Klicks",
+"Unique Clicks": "Eindeutige Klicks",
+"URL": "URL",
+"No data found.": "Keine Daten gefunden.",
+"Time on Page (avg.)": "Besuchsdauer (Durchschnitt)",
+"Bounce Rate": "Absprungrate",
+"Exit Rate": "Ausstiegsrate",
+"Generation Time (avg.)": "Generierungszeit (Durchschnutt)",
+"Entry Pages": "Einstiegsseiten",
+"Exit Pages": "Ausstiegsseiten",
+"Most Viewed Pages": "Am häufigsten besuchte Seiten",
+
+
 ```
 
 ## License

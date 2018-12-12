@@ -18,11 +18,7 @@ class Outlinks extends CustomizedTrend
      */
     public function calculate(Request $request)
     {
-        $url = MatomoAPI::url('VisitsSummary.getActions', $request->range, 'actionType==outlinks');
-
-        $fetched = file_get_contents($url);
-
-        $results = unserialize($fetched);
+        $results = MatomoAPI::visitsSummary('getActions', $request->range, 'actionType==outlinks');
 
         return (new TrendResult())
             ->trend($results)

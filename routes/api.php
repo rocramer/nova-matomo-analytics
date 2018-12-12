@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use Rocramer\MatomoAnalytics\Http\Controller\RequestController;
 /*
 |--------------------------------------------------------------------------
 | Tool API Routes
@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/endpoint', function (Request $request) {
-//     //
-// });
+Route::get('page-urls/{range}', RequestController::class . '@getPageUrls');
+Route::get('entry-pages/{range}', RequestController::class . '@getEntryPages');
+Route::get('exit-pages/{range}', RequestController::class . '@getExitPages');

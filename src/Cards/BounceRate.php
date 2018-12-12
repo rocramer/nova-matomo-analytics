@@ -19,14 +19,10 @@ class BounceRate extends CustomizedTrend
     public function calculate(Request $request)
     {
         // Get Bounce Count
-        $url = MatomoAPI::url('VisitsSummary.getBounceCount', $request->range);
-        $fetched = file_get_contents($url);
-        $bounce_count = unserialize($fetched);
+        $bounce_count = MatomoAPI::visitsSummary('getBounceCount', $request->range);
 
         // Get Page Visits
-        $url = MatomoAPI::url('VisitsSummary.getVisits', $request->range);
-        $fetched = file_get_contents($url);
-        $visits = unserialize($fetched);
+        $visits = MatomoAPI::visitsSummary('getVisits', $request->range);
 
         // Divide to get percentage
         $results = [];
