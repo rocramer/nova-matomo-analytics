@@ -40,7 +40,8 @@ class MatomoAPI
      * Fetches Matomo actions.
      *
      * @param string $method
-     * @param int $range
+     * @param int    $range
+     *
      * @return array
      */
     public static function actions(string $method, int $range): array
@@ -55,7 +56,7 @@ class MatomoAPI
         $url .= "?module=API&method=Actions.$method";
         $url .= "&idSite=$page_id&period=range&date=$from,$till";
         $url .= '&format=PHP';
-        $url .='&filter_limit=10';
+        $url .= '&filter_limit=10';
         $url .= "&token_auth=$token_auth";
 
         $fetched = file_get_contents($url);
