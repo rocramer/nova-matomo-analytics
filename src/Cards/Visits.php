@@ -18,11 +18,7 @@ class Visits extends CustomizedTrend
      */
     public function calculate(Request $request)
     {
-        $url = MatomoAPI::url('VisitsSummary.getVisits', $request->range);
-
-        $fetched = file_get_contents($url);
-
-        $results = unserialize($fetched);
+        $results = MatomoAPI::visitsSummary('getVisits', $request->range);
 
         return (new TrendResult())
             ->trend($results)
