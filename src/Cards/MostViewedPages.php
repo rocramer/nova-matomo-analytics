@@ -15,13 +15,13 @@ class MostViewedPages extends Card
 
     public function __construct()
     {
-        $this->withMeta(['title' => __("Most Viewed Pages")]);
+        $this->withMeta(['title' => __('Most Viewed Pages')]);
 
         $this->withMeta(['ranges' => [
-            7 => '7 ' . __('Days'),
-            14 => '14 ' . __('Days'),
-            30 => '30 ' . __('Days'),
-            90 => '90 ' . __('Days'),
+            7  => '7 '.__('Days'),
+            14 => '14 '.__('Days'),
+            30 => '30 '.__('Days'),
+            90 => '90 '.__('Days'),
         ]]);
     }
 
