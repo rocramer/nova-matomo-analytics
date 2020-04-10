@@ -1,6 +1,6 @@
 <?php
 
-namespace Rocramer\MatomoAnalytics\Http\Controller;
+namespace Rocramer\MatomoAnalytics\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Cache;
