@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Rocramer\MatomoAnalytics\Http\Controller\RequestController;
+use Rocramer\MatomoAnalytics\Http\Controllers\RequestController;
 
 /*
 |--------------------------------------------------------------------------
