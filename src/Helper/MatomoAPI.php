@@ -3,6 +3,7 @@
 namespace Rocramer\MatomoAnalytics\Helper;
 
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Http;
 
 class MatomoAPI
 {
@@ -23,17 +24,14 @@ class MatomoAPI
 
         $url .= "?module=API&method=VisitsSummary.$method";
         $url .= "&idSite=$page_id&period=day&date=last$date";
-        $url .= '&format=PHP';
+        $url .= '&format=json';
         $url .= "&token_auth=$token_auth";
 
         if (!empty($segment)) {
             $url .= "&segment=$segment";
         }
 
-        $fetched = file_get_contents($url);
-        $results = unserialize($fetched);
-
-        return $results;
+        return Http::get($url)->json();
     }
 
     /**
@@ -55,13 +53,10 @@ class MatomoAPI
 
         $url .= "?module=API&method=Actions.$method";
         $url .= "&idSite=$page_id&period=range&date=$from,$till";
-        $url .= '&format=PHP';
+        $url .= '&format=json';
         $url .= '&filter_limit=10';
         $url .= "&token_auth=$token_auth";
 
-        $fetched = file_get_contents($url);
-        $results = unserialize($fetched);
-
-        return $results;
+        return Http::get($url)->json();
     }
 }
