@@ -55,6 +55,7 @@ class MatomoAPI
         $url .= "&idSite=$page_id&period=range&date=$from,$till";
         $url .= '&format=json';
         $url .= '&filter_limit=10';
+        $url .= '&flat=1';
         $url .= "&token_auth=$token_auth";
 
         return Http::get($url)->json();
