@@ -18,10 +18,10 @@ class EntryPages extends Card
         $this->withMeta(['title' => __('Entry Pages')]);
 
         $this->withMeta(['ranges' => [
-            7  => '7 '.__('Days'),
-            14 => '14 '.__('Days'),
-            30 => '30 '.__('Days'),
-            90 => '90 '.__('Days'),
+            7   => '7 '.__('Days'),
+            14  => '14 '.__('Days'),
+            30  => '30 '.__('Days'),
+            90  => '90 '.__('Days'),
             180 => '180 '.__('Days'),
             365 => '365 '.__('Days'),
         ]]);
