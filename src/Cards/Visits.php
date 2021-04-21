@@ -22,7 +22,7 @@ class Visits extends CustomizedTrend
 
         return (new TrendResult())
             ->trend($results)
-            ->showLatestValue();
+            ->showSumValue();
     }
 
     /**

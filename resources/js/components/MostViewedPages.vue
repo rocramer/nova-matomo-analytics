@@ -28,7 +28,7 @@
                 <th class="text-center">{{ __('Bounce Rate') }}</th>
                 <th class="text-center">{{ __('Time on Page (avg.)') }}</th>
                 <th class="text-center">{{ __('Exit Rate') }}</th>
-                <th class="text-center">{{ __('Generation Time (avg.)') }}</th>
+                <th class="text-center">{{ __('Page Load Time (avg.)') }}</th>
             </tr>
             </thead>
             <tbody>
@@ -46,7 +46,7 @@
                 <td class="text-center">{{ page.bounce_rate }}</td>
                 <td class="text-center">{{ page.avg_time_on_page }}s</td>
                 <td class="text-center">{{ page.exit_rate }}</td>
-                <td class="text-center">{{ page.avg_time_generation }}s</td>
+                <td class="text-center">{{ page.avg_page_load_time }}s</td>
             </tr>
             </tbody>
         </table>

@@ -24,10 +24,10 @@ protected function cards()
         new \Rocramer\MatomoAnalytics\Cards\VisitLength(),
         new \Rocramer\MatomoAnalytics\Cards\BounceRate(),
         new \Rocramer\MatomoAnalytics\Cards\Outlinks(),
-        new \Rocramer\MatomoAnalytics\Cards\Downloads()
-        new \Rocramer\MatomoAnalytics\Cards\EntryPages()
-        new \Rocramer\MatomoAnalytics\Cards\ExitPages()
-        new \Rocramer\MatomoAnalytics\Cards\MostViewedPages()
+        new \Rocramer\MatomoAnalytics\Cards\Downloads(),
+        new \Rocramer\MatomoAnalytics\Cards\EntryPages(),
+        new \Rocramer\MatomoAnalytics\Cards\ExitPages(),
+        new \Rocramer\MatomoAnalytics\Cards\MostViewedPages(),
     ];
 }
 ```
@@ -81,12 +81,10 @@ This package uses localization via [Laravel Translation Strings](https://laravel
 "No data found.": "Keine Daten gefunden.",
 "Time on Page (avg.)": "Besuchsdauer (Durchschnitt)",
 "Exit Rate": "Ausstiegsrate",
-"Generation Time (avg.)": "Generierungszeit (Durchschnutt)",
+"Page Load Time (avg.)": "Seitenladezeit (Durchschnitt)",
 "Entry Pages": "Einstiegsseiten",
 "Exit Pages": "Ausstiegsseiten",
 "Most Viewed Pages": "Am häufigsten besuchte Seiten",
-
-
 ```
 
 ## License
