@@ -22,6 +22,8 @@ class MostViewedPages extends Card
             14 => '14 '.__('Days'),
             30 => '30 '.__('Days'),
             90 => '90 '.__('Days'),
+            180 => '180 '.__('Days'),
+            365 => '365 '.__('Days'),
         ]]);
     }
 
